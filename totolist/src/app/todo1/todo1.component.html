@@ -1,0 +1,17 @@
+<h3>Todo list</h3>
+<div class="grid-container">
+    <div class="grid-item item1">
+        <input type="text" class="form-control" placeholder="Entrer todo" [(ngModel)]="newtodo"></div>
+    <div class="grid-item item2">
+        <button class="btn btn-primary" (click)="onSave()">Entrer Todo</button></div>
+    <div class="grid-item item3">
+      <div class="flex-container pt-3">  
+        <div class="flex-item item1">
+            <tr *ngFor="let todo of Todo; let i = index"><td>{{i+1}}. {{ todo.name | titlecase}} </td><td><button class="btn btn-danger mr-10" (click)="onDelete(i)">x</button></td></tr>
+        </div>
+        <div class="flex-item item2">
+        </div>
+        
+    </div>
+    </div>
+</div>
