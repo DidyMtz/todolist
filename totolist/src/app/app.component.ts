@@ -7,7 +7,7 @@ import { Todo } from './todo';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'totolist';
+  title = 'todolist';
 
   todos : Todo[] = [];
   newTodo! : string;
