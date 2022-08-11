@@ -1,18 +1,21 @@
 <h2>TodoList</h2>
 <div class="flex-container">
     <div class="flex-item item1">
-<input type="text" placeholder="add task" [(ngModel)]="newtodo">
+<input type="text" class="form-control" placeholder="add task" [(ngModel)]="newtodo">
     </div>
     <div class="flex-item item2">
-<button class="btn btn-warning" (click)="addTask()">delete</button>
+<button class="btn btn-warning float-end" (click)="addTask()">Add Task</button>
     </div>
-    
+   
 
-   
-        <tr *ngFor="let elt of Todos; let i = index">
-            <td>{{i+1}}.&nbsp;</td>
-            <td>{{elt.name | titlecase}}</td>
-            <td><button class="btn btn-danger">x</button></td>
-        </tr>
-   
+
+
+</div>
+<div class="list">
+   <table> <tr *ngFor="let elt of Todos; let i = index">
+        <td>{{i+1}}.&nbsp;</td>
+        <td [ngClass]="{'done': !elt.isCompleted}" (click)="done(i)">{{elt.name}}</td>
+        <td><button class="btn btn-danger" (click)="remove(i)">x</button></td>
+    </tr>
+</table>
 </div>

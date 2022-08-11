@@ -36,6 +36,13 @@ export class Todoo2Component implements OnInit {
   }
 
 
+  remove(id:number){
+    this.Todos = this.Todos.filter((v,i)=>i !== id);
+  }
 
+  done(id:number){
+   // this.Todos[id].isCompleted = false;
+    this.Todos[id].isCompleted = !this.Todos[id].isCompleted ;
+  }
 
 }

@@ -4,7 +4,16 @@ h2{
 .flex-container{
     display: flex;
     justify-content: center;
-    flex-direction: row;
+   
     align-content: space-between;
     
+}
+.list tr td{
+    
+    margin: 0 auto;
+    text-align: center;
+    text-transform: capitalize;
+}
+.done{
+    text-decoration: line-through;
 }
