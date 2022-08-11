@@ -14,7 +14,7 @@
 <div class="list">
    <table> <tr *ngFor="let elt of Todos; let i = index">
         <td>{{i+1}}.&nbsp;</td>
-        <td [ngClass]="{'done': !elt.isCompleted}" (click)="done(i)">{{elt.name}}</td>
+        <td [ngClass]="{'done': !elt.isCompleted}" (click)="done(i)" [ngStyle]="{width:'250px'}">{{elt.name}}</td>
         <td><button class="btn btn-danger" (click)="remove(i)">x</button></td>
     </tr>
 </table>

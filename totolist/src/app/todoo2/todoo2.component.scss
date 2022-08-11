@@ -8,12 +8,21 @@ h2{
     align-content: space-between;
     
 }
-.list tr td{
+.list{
     
-    margin: 0 auto;
-    text-align: center;
-    text-transform: capitalize;
+   margin: 20px auto;
+   width: 20%;
+   height:50vh;
+  // border:  solid black;
+   background-color: beige;
+   
 }
 .done{
     text-decoration: line-through;
+}
+
+td{
+    padding: 5px; 
+    text-transform: capitalize;
+    
 }
